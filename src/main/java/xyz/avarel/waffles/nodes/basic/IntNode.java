@@ -1,6 +1,7 @@
-package xyz.avarel.waffles.nodes;
+package xyz.avarel.waffles.nodes.basic;
 
 import com.oracle.truffle.api.frame.VirtualFrame;
+import xyz.avarel.waffles.nodes.WaffleNode;
 
 public class IntNode extends WaffleNode {
     private final int value;

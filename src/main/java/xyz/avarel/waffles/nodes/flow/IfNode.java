@@ -1,8 +1,9 @@
-package xyz.avarel.waffles.nodes;
+package xyz.avarel.waffles.nodes.flow;
 
 import com.oracle.truffle.api.frame.VirtualFrame;
 import com.oracle.truffle.api.nodes.UnexpectedResultException;
 import com.oracle.truffle.api.profiles.ConditionProfile;
+import xyz.avarel.waffles.nodes.WaffleNode;
 
 public class IfNode extends WaffleNode {
     @Child

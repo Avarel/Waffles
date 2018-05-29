@@ -11,7 +11,7 @@ public class ReadArgumentNode extends WaffleNode {
 
     @Override
     public Object execute(VirtualFrame virtualFrame) {
-        if (isArgumentIndexInRange(virtualFrame, index)) {
+        if (!isArgumentIndexInRange(virtualFrame, index)) {
             throw new IllegalArgumentException("Not enough arguments passed");
         }
         return getArgument(virtualFrame, index);
