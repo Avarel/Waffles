@@ -20,7 +20,7 @@ private fun execute(node: WaffleNode, topFrame: VirtualFrame): Any {
     val frameDescriptor = topFrame.frameDescriptor
     val function = WaffleFunction.create(arrayOf(), arrayOf(node), frameDescriptor)
     val dcn = Truffle.getRuntime().createDirectCallNode(function.callTarget)
-    return dcn.call(arrayOf(topFrame.materialize()))
+    return dcn.call(arrayOf(topFrame))
 }
 
 private fun createTopFrame(frameDescriptor: FrameDescriptor): VirtualFrame {

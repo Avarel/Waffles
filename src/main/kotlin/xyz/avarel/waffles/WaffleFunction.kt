@@ -7,7 +7,7 @@ import com.oracle.truffle.api.frame.FrameDescriptor
 import com.oracle.truffle.api.frame.FrameSlot
 import com.oracle.truffle.api.frame.MaterializedFrame
 import xyz.avarel.waffles.nodes.BuiltinNode
-import xyz.avarel.waffles.nodes.ReadArgumentNode
+import xyz.avarel.waffles.nodes.read.ReadArgumentNode
 import xyz.avarel.waffles.nodes.WaffleNode
 import xyz.avarel.waffles.nodes.WaffleRootNode
 

@@ -12,6 +12,10 @@ abstract class WaffleNode : Node() {
         return WaffleTypesGen.expectInteger(execute(virtualFrame))
     }
 
+    open fun executeString(virtualFrame: VirtualFrame): String {
+        return WaffleTypesGen.expectString(execute(virtualFrame))
+    }
+
     open fun executeBoolean(virtualFrame: VirtualFrame): Boolean {
         return WaffleTypesGen.expectBoolean(execute(virtualFrame))
     }

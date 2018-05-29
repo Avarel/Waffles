@@ -9,5 +9,8 @@ import xyz.avarel.waffles.nodes.BuiltinNode
 @NodeInfo(shortName = "+")
 abstract class AddBuiltinNode : BuiltinNode() {
     @Specialization
-    fun add(value0: Int, value1: Int) = value0 + value1
+    fun add(left: Int, right: Int) = left + right
+
+    @Specialization
+    fun add(left: String, right: String) = left + right
 }

@@ -6,6 +6,7 @@ import com.oracle.truffle.api.frame.FrameSlot
 import com.oracle.truffle.api.frame.VirtualFrame
 import com.oracle.truffle.api.nodes.ExplodeLoop
 import com.oracle.truffle.api.nodes.RootNode
+import xyz.avarel.waffles.nodes.read.ReadArgumentNode
 
 class WaffleRootNode(frameDescriptor: FrameDescriptor, @field:Children
 private val bodyNodes: Array<WaffleNode>) : RootNode(null, frameDescriptor) {
