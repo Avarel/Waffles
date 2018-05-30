@@ -6,7 +6,13 @@ import xyz.avarel.waffles.WaffleFunction
 import xyz.avarel.waffles.WaffleTypesGen
 
 abstract class WaffleNode : Node() {
+//    var sourceSection: SourceSection? = null
+
     abstract fun execute(virtualFrame: VirtualFrame): Any
+
+//    open fun executeVoid(virtualFrame: VirtualFrame) {
+//
+//    }
 
     open fun executeInt(virtualFrame: VirtualFrame): Int {
         return WaffleTypesGen.expectInteger(execute(virtualFrame))

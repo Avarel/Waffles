@@ -21,6 +21,8 @@ class InvokeNode(
         val function = evaluateFunction(virtualFrame)
         CompilerAsserts.compilationConstant<Any>(argumentNodes.size)
 
+//        println(virtualFrame.lexicalScope?.lexicalScope)
+
         val argumentValues = arrayOfNulls<Any>(argumentNodes.size + 1)
         argumentValues[0] = function.lexicalScope
         for (i in argumentNodes.indices) {

@@ -19,7 +19,10 @@ abstract class LexicalReadNode: WaffleNode() {
 
     @Specialization(rewriteOn = [FrameSlotTypeException::class])
     @Throws(FrameSlotTypeException::class)
-    protected fun readInt(virtualFrame: VirtualFrame) = scope.getInt(slot)
+    protected fun readInt(virtualFrame: VirtualFrame): Int {
+        val int = scope.getInt(slot)
+        return int
+    }
 
     @Specialization(rewriteOn = [FrameSlotTypeException::class])
     @Throws(FrameSlotTypeException::class)

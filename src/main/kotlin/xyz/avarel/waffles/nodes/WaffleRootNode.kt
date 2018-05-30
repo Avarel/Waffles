@@ -8,9 +8,7 @@ import com.oracle.truffle.api.nodes.ExplodeLoop
 import com.oracle.truffle.api.nodes.RootNode
 import xyz.avarel.waffles.nodes.read.ReadArgumentNode
 
-class WaffleRootNode(frameDescriptor: FrameDescriptor, @field:Children
-private val bodyNodes: Array<WaffleNode>) : RootNode(null, frameDescriptor) {
-
+class WaffleRootNode(frameDescriptor: FrameDescriptor, @field:Children private val bodyNodes: Array<WaffleNode>) : RootNode(null, frameDescriptor) {
     @ExplodeLoop
     override fun execute(virtualFrame: VirtualFrame): Any {
         val secondToLast = bodyNodes.size - 1

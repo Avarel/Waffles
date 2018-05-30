@@ -1,5 +1,6 @@
 package xyz.avarel.waffles.nodes.builtin
 
+import com.oracle.truffle.api.dsl.Fallback
 import com.oracle.truffle.api.dsl.GenerateNodeFactory
 import com.oracle.truffle.api.dsl.Specialization
 import com.oracle.truffle.api.nodes.NodeInfo
@@ -13,4 +14,9 @@ abstract class AddBuiltinNode : BuiltinNode() {
 
     @Specialization
     fun add(left: String, right: String) = left + right
+
+    @Fallback
+    fun typeError(left: Any, right: Any) {
+        throw RuntimeException("Tried to add incompatible objects")
+    }
 }
